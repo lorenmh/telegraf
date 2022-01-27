@@ -1,0 +1,4 @@
+my_array = [
+  # hello I am a comment
+  "hello",
+]

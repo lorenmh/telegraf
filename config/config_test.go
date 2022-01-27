@@ -787,3 +787,8 @@ func init() {
 	outputs.Add("azure_monitor", func() telegraf.Output { return &MockupOuputPlugin{NamespacePrefix: "Telegraf/"} })
 	outputs.Add("http", func() telegraf.Output { return &MockupOuputPlugin{} })
 }
+
+func TestConfig_CommentInTomlArray(t *testing.T) {
+	c := NewConfig()
+	require.NoError(t, c.LoadConfig("./testdata/comment_in_toml_array.toml"))
+}
